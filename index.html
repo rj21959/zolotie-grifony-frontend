@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- EmailJS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Золотые Грифоны - Центр развития добровольчества</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F5A623'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-container">
+                    <a href="#" class="logo">
+    <img src="images/logo.png" alt="Золотые Грифоны" class="logo-img">
+    <div class="logo-text">
+        <span class="logo-title">Золотые Грифоны</span>
+        <span class="logo-subtitle">Центр развития добровольчества</span>
+    </div>
+</a>
+                    
+                    <div class="nav-menu">
+                        <ul class="nav-links">
+                            <li><a href="#home">Главная</a></li>
+                            <li><a href="#about">О нас</a></li>
+                            <li><a href="#directions">Направления</a></li>
+                            <li><a href="#news">Новости</a></li>
+                            <li><a href="#branches">Филиалы</a></li>
+                            <li><a href="#contact">Контакты</a></li>
+                        </ul>
+                        <button class="btn-join" id="joinBtn">Присоединиться</button>
+                    </div>
+                    
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+   <!-- Hero Section with Video Background -->
+<section id="home" class="hero">
+    <div class="hero-video-bg">
+        <video autoplay muted loop playsinline id="heroVideo">
+            <source src="videos/hero-bg.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+    </div>
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">Добровольчество • Развитие • Творчество</span>
+                <h1 class="hero-title">Создаем будущее <span class="highlight">вместе</span></h1>
+                <p class="hero-description">
+                    АНО Центр регионального развития школьного и семейного добровольчества 
+                    «Золотые Грифоны» объединяет людей, готовых менять мир к лучшему через 
+                    добровольческий труд и социальную активность.
+                </p>
+                <div class="hero-buttons">
+    <button class="btn-primary" id="heroJoinBtn">Стать добровольцем</button>
+    <button class="btn-support" id="supportBtn">
+        <i class="fas fa-heart"></i> 
+        <span>Поддержать</span>
+        <span class="support-count" id="heroSupportCount">0</span>
+    </button>
+</div>
+            </div>
+            <div class="hero-stats">
+    <div class="stat-card">
+        <div class="stat-number" id="activeVolunteers">0</div>
+        <div class="stat-label">Активных добровольцев</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number" id="completedProjects" data-count="50">0</div>
+        <div class="stat-label">Реализованных проектов</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number" id="helpProvided" data-count="5000">0</div>
+        <div class="stat-label">Помощь оказана</div>
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+
+   <!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">О нас</span>
+            <h2 class="section-title">Кто мы и что делаем</h2>
+            <p class="section-subtitle">«Золотые Грифоны» — это семья добровольцев, объединённых одной целью</p>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <div class="mission-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Наша миссия</h3>
+                    <p>Создавать условия для развития добровольчества, помогать тем, кто нуждается, и воспитывать новое поколение неравнодушных людей. Мы верим, что даже маленькая помощь может изменить чью-то жизнь.</p>
+                </div>
+                
+                <div class="about-stats-mini">
+                    <div class="stat-mini">
+                        <span class="stat-number-mini">2019</span>
+                        <span class="stat-label-mini">Год основания</span>
+                    </div>
+                    <div class="stat-mini">
+                        <span class="stat-number-mini">6</span>
+                        <span class="stat-label-mini">Филиалов в России</span>
+                    </div>
+                    <div class="stat-mini">
+                        <span class="stat-number-mini">150+</span>
+                        <span class="stat-label-mini">Активных волонтёров</span>
+                    </div>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-item">
+                        <i class="fas fa-heart"></i>
+                        <h4>Добровольность</h4>
+                        <p>Только по зову сердца</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-gift"></i>
+                        <h4>Безвозмездность</h4>
+                        <p>Помощь без оплаты</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Ответственность</h4>
+                        <p>За результат и людей</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Уважение</h4>
+                        <p>К каждому человеку</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-highlights">
+                <div class="highlight-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h4>Помощь погорельцам</h4>
+                    <p>Сбор помощи для 17 семей, потерявших жильё при пожаре в посёлке Уренгой</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-chalkboard-user"></i>
+                    <h4>Образовательные проекты</h4>
+                    <p>Бесплатные уроки английского языка и творческие мастер-классы для детей</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-tree"></i>
+                    <h4>Экологические акции</h4>
+                    <p>Уборка территорий, посадка деревьев, забота о природе</p>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-paw"></i>
+                    <h4>Зоозащита</h4>
+                    <p>Помощь приютам для бездомных животных</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Team Section -->
+<section id="team" class="team">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Наша команда</span>
+            <h2 class="section-title">Руководители организации</h2>
+            <p class="section-subtitle">Люди, которые создали и развивают «Золотых Грифонов»</p>
+        </div>
+        
+       <!-- Two Main Leaders Side by Side -->
+<div class="leaders-container">
+    <!-- Founder: Maria Alexeenko -->
+    <div class="leader-card-main">
+        <div class="leader-main-image">
+            <img src="images/team/maria.jpg" alt="Мария Алексеенко" onerror="this.src='https://via.placeholder.com/400x400?text=Maria+A'">
+        </div>
+        <div class="leader-main-info">
+            <h3>Мария Алексеенко</h3>
+            <span class="leader-main-title">Основатель и директор</span>
+            <div class="leader-main-badge">
+                <i class="fas fa-star"></i> Основатель организации
+            </div>
+            <div class="leader-main-quote">
+                <i class="fas fa-quote-left"></i>
+                <p>Добровольчество — это не просто помощь, это состояние души. Мы создаем сообщество людей, готовых менять мир к лучшему.</p>
+            </div>
+            <div class="leader-main-social">
+                <a href="https://t.me/oppocymm" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="https://vk.com/id594384661" target="_blank" title="VK"><i class="fab fa-vk"></i></a>
+                <a href="mailto:maria.alekseenko.09@mail.ru" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Co-Leader: Natalya Alexeenko (Mother) -->
+    <div class="leader-card-main">
+        <div class="leader-main-image">
+            <img src="images/team/natalya.jpg" alt="Наталья Алексеенко" onerror="this.src='https://via.placeholder.com/400x400?text=Natalya+A'">
+        </div>
+        <div class="leader-main-info">
+            <h3>Наталья Алексеенко</h3>
+            <span class="leader-main-title">Сооснователь</span>
+            <div class="leader-main-badge">
+                <i class="fas fa-heart"></i> Мама Марии, вдохновитель
+            </div>
+            <div class="leader-main-quote">
+                <i class="fas fa-quote-left"></i>
+                <p>Семейные ценности — основа настоящего добровольчества. Вместе мы сильнее, и я горжусь тем, что мы создаем эту семью добра.</p>
+            </div>
+            <div class="leader-main-social">
+                <a href="https://t.me/alekseenkonata" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="https://vk.com/alekseenkonatalia" target="_blank" title="VK"><i class="fab fa-vk"></i></a>
+                <a href="mailto:alexeenko77@mail.ru" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        <!-- 6 Branch Leaders Section -->
+        <div class="branch-leaders-section">
+            <div class="section-subheader">
+                <div class="subheader-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Руководители филиалов</h3>
+                <p>Наши представители в 6 регионах России</p>
+            </div>
+            
+            <div class="team-grid" id="teamGrid">
+                <!-- 6 Branch Leaders will be loaded here -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Video Player Modal -->
+<div id="videoPlayerModal" class="video-modal">
+    <div class="video-modal-content">
+        <span class="close-video-modal">&times;</span>
+        <div id="videoPlayerContainer"></div>
+    </div>
+</div>
+
+ <!-- Directions Section -->
+<section id="directions" class="directions">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Направления</span>
+            <h2 class="section-title">Сферы деятельности</h2>
+            <p class="section-subtitle">Мы работаем в 6 ключевых направлениях</p>
+        </div>
+        
+        <div class="directions-grid">
+            <!-- 1. Экологическое -->
+            <div class="direction-card" data-card-id="1">
+                <div class="direction-icon"><i class="fas fa-leaf"></i></div>
+                <div class="direction-main-image">
+                    <img id="mainImage-1" src="images/eco/main.jpg" alt="Экологическое" onclick="openImageModal(this.src)" onerror="this.src='https://picsum.photos/id/100/400/200'">
+                    <button class="main-image-nav prev" onclick="changeMainImage(-1, 1)">❮</button>
+                    <button class="main-image-nav next" onclick="changeMainImage(1, 1)">❯</button>
+                    <span class="current-image-indicator" id="indicator-1">1/5</span>
+                </div>
+                <h3>Экологическое</h3>
+                <p>Охрана окружающей среды, экологические акции и исследования</p>
+                <div class="direction-gallery">
+                    <div class="gallery-title">📸 Фотогалерея (нажмите на фото для просмотра)</div>
+                    <div class="gallery-scroll-container">
+                        <button class="gallery-arrow left" onclick="scrollGalleryHorizontal(this, -1)">❮</button>
+                        <div class="gallery-scroll" id="gallery-1">
+                            <img src="images/eco/1.jpg" alt="Эко 1" onclick="setMainImage(0, 1, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/101/100/70'">
+                            <img src="images/eco/2.jpg" alt="Эко 2" onclick="setMainImage(1, 1, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/102/100/70'">
+                            <img src="images/eco/3.jpg" alt="Эко 3" onclick="setMainImage(2, 1, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/103/100/70'">
+                            <img src="images/eco/4.jpg" alt="Эко 4" onclick="setMainImage(3, 1, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/104/100/70'">
+                            <img src="images/eco/5.jpg" alt="Эко 5" onclick="setMainImage(4, 1, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/105/100/70'">
+                        </div>
+                        <button class="gallery-arrow right" onclick="scrollGalleryHorizontal(this, 1)">❯</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 2. Социальное -->
+            <div class="direction-card" data-card-id="2">
+                <div class="direction-icon"><i class="fas fa-users"></i></div>
+                <div class="direction-main-image">
+                    <img id="mainImage-2" src="images/social/main.jpg" alt="Социальное" onclick="openImageModal(this.src)" onerror="this.src='https://picsum.photos/id/106/400/200'">
+                    <button class="main-image-nav prev" onclick="changeMainImage(-1, 2)">❮</button>
+                    <button class="main-image-nav next" onclick="changeMainImage(1, 2)">❯</button>
+                    <span class="current-image-indicator" id="indicator-2">1/5</span>
+                </div>
+                <h3>Социальное</h3>
+                <p>Помощь ветеранам, детям и одиноким людям</p>
+                <div class="direction-gallery">
+                    <div class="gallery-title">📸 Фотогалерея (нажмите на фото для просмотра)</div>
+                    <div class="gallery-scroll-container">
+                        <button class="gallery-arrow left" onclick="scrollGalleryHorizontal(this, -1)">❮</button>
+                        <div class="gallery-scroll" id="gallery-2">
+                            <img src="images/social/1.jpg" onclick="setMainImage(0, 2, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/107/100/70'">
+                            <img src="images/social/2.jpg" onclick="setMainImage(1, 2, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/108/100/70'">
+                            <img src="images/social/3.jpg" onclick="setMainImage(2, 2, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/109/100/70'">
+                            <img src="images/social/4.jpg" onclick="setMainImage(3, 2, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/110/100/70'">
+                            <img src="images/social/5.jpg" onclick="setMainImage(4, 2, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/111/100/70'">
+                        </div>
+                        <button class="gallery-arrow right" onclick="scrollGalleryHorizontal(this, 1)">❯</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 3. Событийное -->
+            <div class="direction-card" data-card-id="3">
+                <div class="direction-icon"><i class="fas fa-calendar-alt"></i></div>
+                <div class="direction-main-image">
+                    <img id="mainImage-3" src="images/event/main.jpg" alt="Событийное" onclick="openImageModal(this.src)" onerror="this.src='https://picsum.photos/id/112/400/200'">
+                    <button class="main-image-nav prev" onclick="changeMainImage(-1, 3)">❮</button>
+                    <button class="main-image-nav next" onclick="changeMainImage(1, 3)">❯</button>
+                    <span class="current-image-indicator" id="indicator-3">1/5</span>
+                </div>
+                <h3>Событийное</h3>
+                <p>Организация мероприятий и фестивалей</p>
+                <div class="direction-gallery">
+                    <div class="gallery-title">📸 Фотогалерея (нажмите на фото для просмотра)</div>
+                    <div class="gallery-scroll-container">
+                        <button class="gallery-arrow left" onclick="scrollGalleryHorizontal(this, -1)">❮</button>
+                        <div class="gallery-scroll" id="gallery-3">
+                            <img src="images/event/1.jpg" onclick="setMainImage(0, 3, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/113/100/70'">
+                            <img src="images/event/2.jpg" onclick="setMainImage(1, 3, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/114/100/70'">
+                            <img src="images/event/3.jpg" onclick="setMainImage(2, 3, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/115/100/70'">
+                            <img src="images/event/4.jpg" onclick="setMainImage(3, 3, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/116/100/70'">
+                            <img src="images/event/5.jpg" onclick="setMainImage(4, 3, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/117/100/70'">
+                        </div>
+                        <button class="gallery-arrow right" onclick="scrollGalleryHorizontal(this, 1)">❯</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 4. Зоозащита -->
+            <div class="direction-card" data-card-id="4">
+                <div class="direction-icon"><i class="fas fa-paw"></i></div>
+                <div class="direction-main-image">
+                    <img id="mainImage-4" src="images/animal/main.jpg" alt="Зоозащита" onclick="openImageModal(this.src)" onerror="this.src='https://picsum.photos/id/118/400/200'">
+                    <button class="main-image-nav prev" onclick="changeMainImage(-1, 4)">❮</button>
+                    <button class="main-image-nav next" onclick="changeMainImage(1, 4)">❯</button>
+                    <span class="current-image-indicator" id="indicator-4">1/5</span>
+                </div>
+                <h3>Зоозащита</h3>
+                <p>Помощь бездомным животным и приютам</p>
+                <div class="direction-gallery">
+                    <div class="gallery-title">📸 Фотогалерея (нажмите на фото для просмотра)</div>
+                    <div class="gallery-scroll-container">
+                        <button class="gallery-arrow left" onclick="scrollGalleryHorizontal(this, -1)">❮</button>
+                        <div class="gallery-scroll" id="gallery-4">
+                            <img src="images/animal/1.jpg" onclick="setMainImage(0, 4, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/119/100/70'">
+                            <img src="images/animal/2.jpg" onclick="setMainImage(1, 4, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/120/100/70'">
+                            <img src="images/animal/3.jpg" onclick="setMainImage(2, 4, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/121/100/70'">
+                            <img src="images/animal/4.jpg" onclick="setMainImage(3, 4, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/122/100/70'">
+                            <img src="images/animal/5.jpg" onclick="setMainImage(4, 4, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/123/100/70'">
+                        </div>
+                        <button class="gallery-arrow right" onclick="scrollGalleryHorizontal(this, 1)">❯</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 5. Спортивно-оздоровительное -->
+            <div class="direction-card" data-card-id="5">
+                <div class="direction-icon"><i class="fas fa-futbol"></i></div>
+                <div class="direction-main-image">
+                    <img id="mainImage-5" src="images/sport/main.jpg" alt="Спорт" onclick="openImageModal(this.src)" onerror="this.src='https://picsum.photos/id/124/400/200'">
+                    <button class="main-image-nav prev" onclick="changeMainImage(-1, 5)">❮</button>
+                    <button class="main-image-nav next" onclick="changeMainImage(1, 5)">❯</button>
+                    <span class="current-image-indicator" id="indicator-5">1/5</span>
+                </div>
+                <h3>Спортивно-оздоровительное</h3>
+                <p>ЗОЖ, спорт и физическая культура</p>
+                <div class="direction-gallery">
+                    <div class="gallery-title">📸 Фотогалерея (нажмите на фото для просмотра)</div>
+                    <div class="gallery-scroll-container">
+                        <button class="gallery-arrow left" onclick="scrollGalleryHorizontal(this, -1)">❮</button>
+                        <div class="gallery-scroll" id="gallery-5">
+                            <img src="images/sport/1.jpg" onclick="setMainImage(0, 5, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/125/100/70'">
+                            <img src="images/sport/2.jpg" onclick="setMainImage(1, 5, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/126/100/70'">
+                            <img src="images/sport/3.jpg" onclick="setMainImage(2, 5, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/127/100/70'">
+                            <img src="images/sport/4.jpg" onclick="setMainImage(3, 5, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/128/100/70'">
+                            <img src="images/sport/5.jpg" onclick="setMainImage(4, 5, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/129/100/70'">
+                        </div>
+                        <button class="gallery-arrow right" onclick="scrollGalleryHorizontal(this, 1)">❯</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 6. Патриотическое -->
+            <div class="direction-card" data-card-id="6">
+                <div class="direction-icon"><i class="fas fa-flag-checkered"></i></div>
+                <div class="direction-main-image">
+                    <img id="mainImage-6" src="images/patriot/main.jpg" alt="Патриотизм" onclick="openImageModal(this.src)" onerror="this.src='https://picsum.photos/id/130/400/200'">
+                    <button class="main-image-nav prev" onclick="changeMainImage(-1, 6)">❮</button>
+                    <button class="main-image-nav next" onclick="changeMainImage(1, 6)">❯</button>
+                    <span class="current-image-indicator" id="indicator-6">1/5</span>
+                </div>
+                <h3>Патриотическое</h3>
+                <p>Патриотическое воспитание и культура</p>
+                <div class="direction-gallery">
+                    <div class="gallery-title">📸 Фотогалерея (нажмите на фото для просмотра)</div>
+                    <div class="gallery-scroll-container">
+                        <button class="gallery-arrow left" onclick="scrollGalleryHorizontal(this, -1)">❮</button>
+                        <div class="gallery-scroll" id="gallery-6">
+                            <img src="images/patriot/1.jpg" onclick="setMainImage(0, 6, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/131/100/70'">
+                            <img src="images/patriot/2.jpg" onclick="setMainImage(1, 6, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/132/100/70'">
+                            <img src="images/patriot/3.jpg" onclick="setMainImage(2, 6, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/133/100/70'">
+                            <img src="images/patriot/4.jpg" onclick="setMainImage(3, 6, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/134/100/70'">
+                            <img src="images/patriot/5.jpg" onclick="setMainImage(4, 6, this.src.replace('/100/70', '/400/200').replace('/120/90', '/400/200'))" onerror="this.src='https://picsum.photos/id/135/100/70'">
+                        </div>
+                        <button class="gallery-arrow right" onclick="scrollGalleryHorizontal(this, 1)">❯</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- News Section (ONLY News and Announcements) -->
+<section id="news" class="news">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Новости</span>
+            <h2 class="section-title">Актуальные новости</h2>
+            <p class="section-subtitle">Будьте в курсе последних событий</p>
+        </div>
+        
+        <div class="news-grid" id="newsGrid">
+            <!-- News and Announcements will be loaded here -->
+        </div>
+        
+        <div class="news-controls">
+            <button class="load-more-btn" id="loadMoreNews">
+                <span>Загрузить еще</span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Events Section (ONLY Events) -->
+<section id="events" class="events">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Мероприятия</span>
+            <h2 class="section-title">Предстоящие события</h2>
+            <p class="section-subtitle">Присоединяйтесь к нашим мероприятиям</p>
+        </div>
+        
+        <div class="events-grid" id="eventsGrid">
+            <!-- Events will be loaded here -->
+        </div>
+    </div>
+</section>
+
+
+    <!-- Branches Section -->
+    <section id="branches" class="branches">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Наши филиалы</span>
+                <h2 class="section-title">Региональные отделения</h2>
+                <p class="section-subtitle">Мы растём и развиваемся по всей России</p>
+            </div>
+            
+            <div class="branches-grid" id="branchesGrid">
+                <div class="branch-card" data-vk="https://vk.com/zolotiegrifony">
+                    <div class="branch-badge">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Головной офис</span>
+                    </div>
+                    <h3>Московская область</h3>
+                    <p>Центральный офис организации</p>
+                    <a href="https://vk.com/zolotiegrifony" target="_blank" class="branch-link">
+                        <i class="fab fa-vk"></i> ВКонтакте
+                    </a>
+                </div>
+                
+                <div class="branch-card" data-vk="#">
+                    <div class="branch-badge">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Филиал</span>
+                    </div>
+                    <h3>Санкт-Петербург</h3>
+                    <p>Северо-Западное отделение</p>
+                    <a href="#" target="_blank" class="branch-link">
+                        <i class="fab fa-vk"></i> ВКонтакте
+                    </a>
+                </div>
+                
+                <div class="branch-card" data-vk="#">
+                    <div class="branch-badge">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Филиал</span>
+                    </div>
+                    <h3>Нижний Новгород</h3>
+                    <p>Приволжское отделение</p>
+                    <a href="#" target="_blank" class="branch-link">
+                        <i class="fab fa-vk"></i> ВКонтакте
+                    </a>
+                </div>
+                
+                <div class="branch-card" data-vk="#">
+                    <div class="branch-badge">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Филиал</span>
+                    </div>
+                    <h3>Екатеринбург</h3>
+                    <p>Уральское отделение</p>
+                    <a href="#" target="_blank" class="branch-link">
+                        <i class="fab fa-vk"></i> ВКонтакте
+                    </a>
+                </div>
+                
+                <div class="branch-card" data-vk="#">
+                    <div class="branch-badge">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Филиал</span>
+                    </div>
+                    <h3>Новосибирск</h3>
+                    <p>Сибирское отделение</p>
+                    <a href="#" target="_blank" class="branch-link">
+                        <i class="fab fa-vk"></i> ВКонтакте
+                    </a>
+                </div>
+                
+                <div class="branch-card" data-vk="#">
+                    <div class="branch-badge">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Филиал</span>
+                    </div>
+                    <h3>Краснодар</h3>
+                    <p>Южное отделение</p>
+                    <a href="#" target="_blank" class="branch-link">
+                        <i class="fab fa-vk"></i> ВКонтакте
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Moments/Video Section -->
+<section class="moments-section">
+    <div class="container">
+        <div class="section-header-center">
+            <span class="section-tag">Видеомоменты</span>
+            <h2 class="section-title">Яркие мгновения</h2>
+            <p class="section-subtitle">Смотрите видео о нашей деятельности</p>
+        </div>
+        <div class="scroll-container" id="momentsScrollContainer">
+            <div class="scroll-wrapper" id="momentsList"></div>
+        </div>
+    </div>
+</section>
+
+    <!-- Awards Section -->
+<section class="awards-section">
+    <div class="container">
+        <div class="section-header-center">
+            <span class="section-tag">Наши достижения</span>
+            <h2 class="section-title">Награды и признание</h2>
+            <p class="section-subtitle">Мы гордимся доверием государственных и общественных организаций</p>
+        </div>
+        <div class="scroll-container" id="awardsScrollContainer">
+            <div class="scroll-wrapper" id="awardsList"></div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-tag">Свяжитесь с нами</span>
+                    <h2>Остались вопросы?</h2>
+                    <p>Мы всегда рады ответить на ваши вопросы и помочь с любыми трудностями</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:info@zolotiegrifony.ru">info@zolotiegrifony.ru</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Телефон</h4>
+                                <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-vk"></i>
+                            <div>
+                                <h4>ВКонтакте</h4>
+                                <a href="https://vk.com/zolotiegrifony" target="_blank">@zolotiegrifony</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="Ваш Email" required>
+                    <textarea rows="5" placeholder="Ваше сообщение" required></textarea>
+                    <button type="submit" class="btn-primary">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+    <div class="logo">
+        <img src="images/logo.png" alt="Золотые Грифоны" class="footer-logo-img">
+        <div class="logo-text">
+            <span class="logo-title">Золотые Грифоны</span>
+        </div>
+    </div>
+    <p>Центр регионального развития школьного и семейного добровольчества</p>
+   <div class="social-links">
+    <a href="https://vk.com/zolotiegrifony" target="_blank"><i class="fab fa-vk"></i></a>
+    <a href="https://t.me/zolotiegrifony" target="_blank"><i class="fab fa-telegram"></i></a>
+    <a href="https://www.youtube.com/@1dobrovolmedia/featured" target="_blank"><i class="fab fa-youtube"></i></a>
+</div>
+
+<div class="media-links" style="margin-top: 15px;">
+    <p style="font-size: 12px; margin-bottom: 8px;">Медиа:</p>
+    <a href="https://vk.com/club225365607" target="_blank" style="color: #fff; margin-right: 15px;"><i class="fab fa-vk"></i> Media VK</a>
+    <a href="https://www.youtube.com/@1dobrovolmedia/featured" target="_blank" style="color: #fff;"><i class="fab fa-youtube"></i> YouTube Media</a>
+</div>
+</div>
+            
+            <div class="footer-section">
+                <h4>Быстрые ссылки</h4>
+                <ul>
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#directions">Направления</a></li>
+                    <li><a href="#news">Новости</a></li>
+                    <li><a href="#branches">Филиалы</a></li>
+                </ul>
+            </div>
+            
+           <div class="footer-section">
+    <h4>Документы</h4>
+    <ul class="documents-list">
+        <li>
+            <a href="https://heyzine.com/flip-book/f9bf7fd44b.html" target="_blank" class="doc-link">
+                <i class="fas fa-book-open"></i>
+                Положение об организации
+            </a>
+        </li>
+        <li>
+            <a href="https://heyzine.com/flip-book/2e4dcfd8e1.html" target="_blank" class="doc-link">
+                <i class="fas fa-book-open"></i>
+                Устав
+            </a>
+        </li>
+        <li>
+            <a href="documents/survey.pdf" target="_blank" class="doc-link">
+                <i class="fas fa-file-chart"></i>
+                Результаты опроса
+            </a>
+        </li>
+    </ul>
+</div>
+            
+            <div class="footer-section">
+                <button class="btn-support-footer" id="footerSupportBtn">
+                    <i class="fas fa-heart"></i> 
+                    <span>Мне нравится</span>
+                    <span class="support-count" id="footerSupportCount">0</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 АНО «Золотые Грифоны». Все права защищены.</p>
+            <a href="admin.html" class="admin-link">Админ панель</a>
+        </div>
+    </div>
+</footer>
+
+<!-- Join Modal -->
+<div id="joinModal" class="join-modal">
+    <div class="join-modal-content">
+        <span class="join-modal-close">&times;</span>
+        <div class="join-modal-container">
+            
+            <!-- LEFT COLUMN: PDF Guide -->
+            <div class="join-modal-video">
+                <h3><i class="fas fa-file-pdf"></i> Как стать добровольцем?</h3>
+                
+                <!-- PDF Viewer Container -->
+                <div style="background: #ffffff; border-radius: 16px; border: 1px solid #e9ecef; width: 100%; height: 400px; overflow: hidden; position: relative; display: flex; flex-direction: column;">
+                    
+                    <!-- PDF Toolbar -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: #f8f9fa; border-bottom: 1px solid #e9ecef; flex-shrink: 0;">
+                        <div style="display: flex; gap: 6px; align-items: center;">
+                            <button onclick="zoomPdf('in')" style="background: none; border: 1px solid #ddd; border-radius: 4px; padding: 4px 10px; cursor: pointer; font-size: 14px;" title="Увеличить">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button onclick="zoomPdf('out')" style="background: none; border: 1px solid #ddd; border-radius: 4px; padding: 4px 10px; cursor: pointer; font-size: 14px;" title="Уменьшить">
+                                <i class="fas fa-search-minus"></i>
+                            </button>
+                            <span id="pdfZoomLevel" style="font-size: 12px; color: #666; min-width: 45px; text-align: center;">100%</span>
+                            <button onclick="resetPdfZoom()" style="background: none; border: 1px solid #ddd; border-radius: 4px; padding: 4px 10px; cursor: pointer; font-size: 12px;" title="Сбросить">
+                                <i class="fas fa-undo"></i>
+                            </button>
+                        </div>
+                        <div style="display: flex; gap: 6px;">
+                            <button onclick="openPdfFullscreen()" style="background: none; border: 1px solid #ddd; border-radius: 4px; padding: 4px 10px; cursor: pointer; font-size: 14px;" title="На весь экран">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                            <a href="documents/tutorial-guide.pdf" download style="background: none; border: 1px solid #ddd; border-radius: 4px; padding: 4px 10px; cursor: pointer; font-size: 14px; color: #333; text-decoration: none;" title="Скачать PDF">
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- PDF Scrollable Area -->
+                    <div id="pdfScrollContainer" style="flex: 1; overflow: auto; padding: 10px; background: #f0f0f0;">
+                        <div id="pdfWrapper" style="display: flex; justify-content: center; align-items: flex-start; min-height: 100%;">
+                            <object id="pdfObject" data="documents/tutorial-guide.pdf" type="application/pdf" style="width: 100%; height: 600px; border: none; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.2s;">
+                                <p style="text-align: center; padding: 40px;">
+                                    <i class="fas fa-file-pdf" style="font-size: 48px; color: #e74c3c; display: block; margin-bottom: 15px;"></i>
+                                    Ваш браузер не поддерживает просмотр PDF.<br>
+                                    <a href="documents/tutorial-guide.pdf" download style="color: #F5A623;">Скачайте PDF</a>
+                                </p>
+                            </object>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="video-caption" style="margin-top: 12px;">📄 Ознакомьтесь с руководством, затем нажмите кнопку справа</p>
+            </div>
+            
+            <!-- RIGHT COLUMN: Instructions -->
+            <div class="join-modal-info">
+                <h3><i class="fas fa-hand-holding-heart"></i> Готовы присоединиться?</h3>
+                <p>После ознакомления с руководством перейдите на официальный портал <strong>dobru.ru</strong> для завершения регистрации.</p>
+                
+                <div class="join-steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <span>Ознакомьтесь с руководством</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <span>Нажмите кнопку ниже</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <span>Заполните форму на dobru.ru</span>
+                    </div>
+                </div>
+                
+                <a href="https://dobro.ru/organizations/733569/info?utm_source=dobroru&utm_medium=org" target="_blank" class="join-dobru-btn">
+                    <i class="fas fa-external-link-alt"></i>
+                    Перейти к регистрации на dobru.ru
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                
+                <p class="join-note">
+                    <i class="fas fa-info-circle"></i>
+                    После регистрации на dobru.ru ваша заявка будет рассмотрена администратором.
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Fullscreen PDF Modal -->
+<div id="pdfFullscreenModal" 
+     style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 10000; padding: 20px;">
+    
+    <div style="position: relative; width: 100%; height: 100%; display: flex; flex-direction: column;">
+        <!-- Fullscreen Toolbar -->
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; background: rgba(255,255,255,0.1); border-radius: 12px 12px 0 0; flex-shrink: 0;">
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <button onclick="zoomFullscreenPdf('in')" style="background: rgba(255,255,255,0.2); border: none; border-radius: 4px; padding: 6px 12px; cursor: pointer; color: white; font-size: 14px;">
+                    <i class="fas fa-search-plus"></i>
+                </button>
+                <button onclick="zoomFullscreenPdf('out')" style="background: rgba(255,255,255,0.2); border: none; border-radius: 4px; padding: 6px 12px; cursor: pointer; color: white; font-size: 14px;">
+                    <i class="fas fa-search-minus"></i>
+                </button>
+                <span id="fullscreenZoomLevel" style="color: white; font-size: 13px; min-width: 45px;">100%</span>
+                <button onclick="resetFullscreenPdfZoom()" style="background: rgba(255,255,255,0.2); border: none; border-radius: 4px; padding: 6px 12px; cursor: pointer; color: white; font-size: 12px;">
+                    <i class="fas fa-undo"></i>
+                </button>
+            </div>
+            <div style="display: flex; gap: 8px; align-items: center;">
+                <a href="documents/tutorial-guide.pdf" download style="background: rgba(255,255,255,0.2); border: none; border-radius: 4px; padding: 6px 12px; cursor: pointer; color: white; text-decoration: none; font-size: 14px;">
+                    <i class="fas fa-download"></i> Скачать
+                </a>
+                <button onclick="closePdfFullscreen()" style="background: none; border: none; color: white; font-size: 30px; cursor: pointer; padding: 0 10px;">
+                    &times;
+                </button>
+            </div>
+        </div>
+        
+        <!-- Fullscreen PDF Scroll Area -->
+        <div id="fullscreenScrollContainer" style="flex: 1; overflow: auto; padding: 20px; background: #1a1a2e; border-radius: 0 0 12px 12px;">
+            <div id="fullscreenPdfWrapper" style="display: flex; justify-content: center; align-items: flex-start; min-height: 100%;">
+                <object id="fullscreenPdfObject" data="documents/tutorial-guide.pdf" type="application/pdf" style="width: 100%; height: 800px; border: none; background: white; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); transition: transform 0.2s;">
+                    <p style="text-align: center; padding: 40px; color: white;">
+                        <i class="fas fa-file-pdf" style="font-size: 48px; display: block; margin-bottom: 15px;"></i>
+                        Ваш браузер не поддерживает просмотр PDF.<br>
+                        <a href="documents/tutorial-guide.pdf" download style="color: #F5A623;">Скачайте PDF</a>
+                    </p>
+                </object>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// PDF Zoom Controls
+let currentZoom = 100;
+let fullscreenZoom = 100;
+
+function zoomPdf(direction) {
+    const object = document.getElementById('pdfObject');
+    if (!object) return;
+    
+    if (direction === 'in') {
+        currentZoom = Math.min(currentZoom + 10, 200);
+    } else {
+        currentZoom = Math.max(currentZoom - 10, 50);
+    }
+    
+    object.style.transform = `scale(${currentZoom / 100})`;
+    object.style.transformOrigin = 'top center';
+    document.getElementById('pdfZoomLevel').textContent = currentZoom + '%';
+}
+
+function resetPdfZoom() {
+    currentZoom = 100;
+    const object = document.getElementById('pdfObject');
+    if (object) {
+        object.style.transform = 'scale(1)';
+        object.style.transformOrigin = 'top center';
+    }
+    document.getElementById('pdfZoomLevel').textContent = '100%';
+}
+
+function zoomFullscreenPdf(direction) {
+    const object = document.getElementById('fullscreenPdfObject');
+    if (!object) return;
+    
+    if (direction === 'in') {
+        fullscreenZoom = Math.min(fullscreenZoom + 10, 200);
+    } else {
+        fullscreenZoom = Math.max(fullscreenZoom - 10, 50);
+    }
+    
+    object.style.transform = `scale(${fullscreenZoom / 100})`;
+    object.style.transformOrigin = 'top center';
+    document.getElementById('fullscreenZoomLevel').textContent = fullscreenZoom + '%';
+}
+
+function resetFullscreenPdfZoom() {
+    fullscreenZoom = 100;
+    const object = document.getElementById('fullscreenPdfObject');
+    if (object) {
+        object.style.transform = 'scale(1)';
+        object.style.transformOrigin = 'top center';
+    }
+    document.getElementById('fullscreenZoomLevel').textContent = '100%';
+}
+
+// Fullscreen functions
+function openPdfFullscreen() {
+    document.getElementById('pdfFullscreenModal').style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    // Sync zoom level
+    resetFullscreenPdfZoom();
+}
+
+function closePdfFullscreen() {
+    document.getElementById('pdfFullscreenModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Close with ESC key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closePdfFullscreen();
+    }
+});
+
+// Close when clicking background
+document.getElementById('pdfFullscreenModal').addEventListener('click', function(event) {
+    if (event.target === this) {
+        closePdfFullscreen();
+    }
+});
+
+// Re-render PDF when modal opens (fix for some browsers)
+document.addEventListener('DOMContentLoaded', function() {
+    const joinBtn = document.getElementById('joinBtn');
+    const heroJoinBtn = document.getElementById('heroJoinBtn');
+    
+    function refreshPdf() {
+        setTimeout(function() {
+            const object = document.getElementById('pdfObject');
+            if (object) {
+                const data = object.data;
+                object.data = '';
+                setTimeout(function() {
+                    object.data = data;
+                }, 100);
+            }
+        }, 300);
+    }
+    
+    if (joinBtn) {
+        joinBtn.addEventListener('click', refreshPdf);
+    }
+    if (heroJoinBtn) {
+        heroJoinBtn.addEventListener('click', refreshPdf);
+    }
+});
+</script>
+    <!-- Supabase Library -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<!-- Your Supabase Configuration -->
+<script src="js/supabase.js"></script>
+<!-- Main Website Script -->
+<script src="js/main.js"></script>
+</body>
+</html>
