@@ -11,7 +11,7 @@ window.supabasePublic = supabasePublic;
 
 // ============ API BASE URL ============
 // Change this to your deployed backend URL
-const API_BASE_URL = 'https://zolotie-grifony-api.onrender.com/api';
+const API_BASE_URL = 'https://rj21959-zolotie-grifony-backend-35cc.twc1.net/api';
 
 // ============ PUBLIC READ FUNCTIONS (No auth needed) ============
 
